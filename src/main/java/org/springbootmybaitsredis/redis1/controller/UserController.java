@@ -46,11 +46,8 @@ public class UserController {
     @ApiOperation("/查询单个用户，参数是主键 userid")
     @RequestMapping(value = "/findById/{id}", method = RequestMethod.GET)
     public UserVo findById(@PathVariable int id) {
-        System.out.println("ddddddd");
         User user = this.userService.findUser(id);
-        System.out.println("eeeeeee");
         UserVo userVo = new UserVo();
-        System.out.println(user);
         BeanUtils.copyProperties(user, userVo);
         return userVo;
     }
