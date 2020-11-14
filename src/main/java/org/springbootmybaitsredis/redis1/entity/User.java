@@ -11,7 +11,7 @@ import java.util.Date;
 
 @ApiModel("用户类")
 @Table(name="users")
-public class User implements Serializable {
+public class User{
 
     @Id
     @GeneratedValue(generator = "JDBC")
